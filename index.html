@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Buscador de CEP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Adicionando Javascript -->
+    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Inicio do formulario -->
+    <div class="container">
+        <div class="segment">
+            <h1>Buscador de CEP</h1>
+            <p>Digite o CEP e ao sair o campo o endereço será completado. Pode utilizar a tecla TAB após digitar o CEP.</p><br />
+        </div>
+        <form method="get" action=".">
+
+            <input name="cep" type="text" id="cep" value="" maxlength="9" onblur="pesquisacep(this.value);"
+                placeholder="CEP" /><br />
+            <input name="rua" type="text" id="rua" placeholder="Rua" /><br />
+            <input name="bairro" type="text" id="bairro" placeholder="Bairro" /><br />
+            <input name="cidade" type="text" id="cidade" placeholder="Cidade" /><br />
+            <input name="uf" type="text" id="uf" placeholder="UF" /><br />
+            <input name="ibge" type="text" id="ibge" placeholder="IBGE" /><br />
+
+            <button class="button button1" onclick="limpa_formulário_cep()">LIMPAR</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
